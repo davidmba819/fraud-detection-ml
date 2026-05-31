@@ -1,53 +1,54 @@
 # Financial Fraud Detection Using Explainable Machine Learning
 
-An end-to-end fraud detection project focused on explainability, imbalance learning, threshold optimization, and business-oriented machine learning.
+This project focuses on building machine learning models capable of detecting fraudulent financial transactions under severe class imbalance.
 
-This project explores how classical machine learning models can be used to identify fraudulent financial transactions while balancing fraud prevention, customer experience, and operational efficiency.
+The project explores how different machine learning models behave in fraud detection scenarios, with particular attention to recall, threshold tuning, explainability, and fraud pattern analysis.
 
-Rather than treating fraud detection as only a prediction problem, the project approaches it as a real-world decision system where model outputs directly affect customers, transaction flow, and fraud investigation processes.
+Rather than treating fraud detection as only a classification problem, the project also considers some of the practical tradeoffs involved in real-world fraud systems such as false positives, customer friction, and missed fraud cases.
 
 ---
 
 # Project Objectives
 
-The main goal of this project is to build and evaluate multiple machine learning models capable of detecting fraudulent transactions under severe class imbalance.
+The main objective of this project is to build and compare multiple machine learning models for fraud detection using transactional financial data.
 
 The project focuses on:
 
-* fraud detection under imbalanced data
-* feature engineering for transactional behavior
-* model family comparison
+* fraud detection under highly imbalanced data
+* transactional behavior analysis
+* feature engineering
+* model comparison across different model families
 * threshold optimization
-* explainable AI using SHAP
-* business-oriented evaluation
-* fraud pattern analysis
+* explainability using SHAP
+* fraud pattern interpretation
 
 ---
 
 # Dataset
 
-This project uses the PaySim Mobile Money Fraud Detection dataset from [Kaggle](https://www.kaggle.com/datasets/ealaxi/paysim1?utm_source=chatgpt.com).
+This project uses the PaySim Mobile Money Fraud Detection dataset from Kaggle.
 
 The dataset contains simulated mobile money transactions with features related to:
 
 * transaction type
-* account balances
-* transfer amounts
-* sender and receiver behavior
+* transaction amount
+* sender and receiver balances
+* account behavior
+* fraud labels
 
+The dataset is highly imbalanced, with fraudulent transactions representing only a very small fraction of total transactions.
 
 ---
 
 # Machine Learning Workflow
 
-The project is organized into five main stages:
-
 ## 1. Business Understanding, Data Audit & EDA
 
 * business problem framing
 * dataset overview
-* class imbalance analysis
-* leakage investigation
+* class imbalance assessment
+* transaction consistency investigation
+* leakage assessment
 * fraud behavior exploration
 * transaction pattern analysis
 
@@ -56,16 +57,16 @@ The project is organized into five main stages:
 ## 2. Feature Engineering & Preprocessing
 
 * behavioral feature engineering
-* encoding and transformations
-* imbalance handling
-* train-test strategy
 * preprocessing pipeline
+* categorical handling
+* train-test splitting strategy
+* imbalance handling techniques
 
 ---
 
 ## 3. Model Training & Comparison
 
-### Naive Baseline
+### Baseline Model
 
 * DummyClassifier
 
@@ -98,24 +99,24 @@ Models will be evaluated using:
 
 ---
 
-## 4. Hyperparameter Tuning & Threshold Engineering
+## 4. Hyperparameter Tuning & Threshold Optimization
 
-* hyperparameter optimization
-* threshold tuning
+* hyperparameter tuning
+* threshold engineering
 * calibration analysis
 * precision-recall tradeoff analysis
 
-The project prioritizes fraud detection recall while maintaining operationally manageable false positive rates.
+The project prioritizes fraud detection recall while still attempting to maintain manageable false positive rates.
 
 ---
 
-## 5. SHAP Explainability & Business Insights
+## 5. SHAP Explainability & Insights
 
 * global feature importance
 * local prediction explanations
 * fraud behavior interpretation
-* business recommendations
-* model governance discussion
+* model explainability analysis
+* business insights and recommendations
 
 ---
 
@@ -161,19 +162,6 @@ fraud-detection-ml/
 
 ---
 
-# Key Focus Areas
-
-This project emphasizes:
-
-* explainable machine learning
-* fraud intelligence analysis
-* business-aware model evaluation
-* threshold optimization
-* operational tradeoffs
-* realistic fraud detection challenges
-
----
-
-# Status
+# Current Status
 
 Project currently in development.
